@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.principal-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    height: 60%;
+    max-height: 800px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: var(--body-bg);
+    box-shadow: 0px 10px 40px #d1caca;
+    border-radius: 20px;
+}
+
+.content h1 {
+    font-size: 4rem;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.form input {
+    width: 100%;
+    border: 1px solid #d1caca;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #f3f3f3;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.form label {
+    font-size: 1.7rem;
+    margin: .5rem 0;
+    font-weight: 300;
+}
+
+/* REMOVE AS SETAS DO INPUT DE TIPO NUMBER */ 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+/* REMOVE AS SETAS DO INPUT DE TIPO NUMBER */ 
+
+

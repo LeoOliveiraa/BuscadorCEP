@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Buscador de CEP</title>
+</head>
+<body>
+    
+
+    <div class="principal-content">
+
+    <div class="content">
+        <h1>Buscador de CEP</h1>
+
+    <div class="form">
+
+        <label for="cep">CEP</label>
+        <input type="number" placeholder="Digite o CEP" name="cep" id="cep" value="" maxlength="9">
+
+        <label for="cdd">Cidade</label>
+        <input type="text" name="cdd" id="cdd">
+
+        <label for="estado">Estado</label>
+        <input type="text" name="estado" id="estado">
+
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" id="bairro">
+
+        <label for="rua">Rua</label>
+        <input type="text" name="rua" id="rua">
+
+        <button id="botaoBuscar">Buscar</button>
+        <button id="botaoResetar" onclick="limpar_form()">Limpar</button>
+
+    </div>
+    </div>
+    </div>
+
+<script src="./assets/js/main.js"></script>    
+</body>
+</html>
