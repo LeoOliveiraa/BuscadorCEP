@@ -1,10 +1,25 @@
-// Buscar os elementos DOM corretos
-let cepInput = document.getElementById('cep');
+//Armazenamento dos itens em variáveis.
+let cepInput = document.getElementById('cep')
 let cidadeInput = document.getElementById('cdd');
 let estadoInput = document.getElementById('estado');
 let bairroInput = document.getElementById('bairro');
 let ruaInput = document.getElementById('rua');
+const loader = document.getElementById('loader');
 
+//Função pra mostrar animação de carregamento
+function showLoader() {
+    loader.style.display = 'block';
+    document.body.classList.add('blurred-background');
+}
+
+//Função pra ocultar animação de carregamento
+function hideLoader() {
+    loader.style.display = 'none';
+    document.body.classList.remove('blurred-background');
+}
+
+
+//Função pra limpar os campos após ser chamada por um botão.
 function limpar_form() {
     cepInput.value = "";
     cidadeInput.value = "";
@@ -13,13 +28,17 @@ function limpar_form() {
     ruaInput.value = "";
 }
 
-
+//Função principal do webApp
 async function buscarCep(cep) {
+    
+    //exibe a animação de carregamento
+    showLoader();
 
-    cep = cep.replace('-', '');
-    // Verifique se o valor de cep é válido (não vazio)
+    //Regex pro CEP
+    cep = cep.replace(/\D/g, '');
+    //Verifica se o campos está vazio
     if (!cep) {
-        alert('Por favor, insira um CEP válido.');
+        alert('Por favor, insira um CEP válido.\n Aceitamos somente números!');
         return;
     }
 
@@ -35,6 +54,8 @@ async function buscarCep(cep) {
         }
     } catch {
         alert('A pesquisa por CEP falhou, tente novamente!');
+    } finally {
+        hideLoader();
     }
 }
 
@@ -44,7 +65,7 @@ function mostrarNaTela(resultado) {
     // Defina outras propriedades, como estado, bairro e rua, da mesma maneira, se necessário.
 }
 
-// Exemplo de como você pode chamar a função buscarCep() ao pressionar um botão, por exemplo:
+//Chamada da ação principal através de um botão.
 document.getElementById('botaoBuscar').addEventListener('click', function () {
     const cep = cepInput.value;
     buscarCep(cep);

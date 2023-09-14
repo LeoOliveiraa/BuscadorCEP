@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Sistema para buscar endereços a partir de CEP">
+    <meta name="keywords" content="cep, buscar, buscador, buscar cep, endereço, projeto, egenharia, software">
+    <meta name="author" content="Leonardo Oliveira">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/localizacao.ico">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Buscador de CEP</title>
+    <title>Buscador de CEP e Endereços </title>
 </head>
 <body>
     
+    <div id="loader" class="loader"></div>
 
     <div class="principal-content">
 
@@ -31,12 +37,21 @@
         <label for="rua">Rua</label>
         <input type="text" name="rua" id="rua">
 
-        <button id="botaoBuscar">Buscar</button>
-        <button id="botaoResetar" onclick="limpar_form()">Limpar</button>
+        <div class="btns">
 
+        <button id="botaoBuscar" class="btn-busca">Buscar</button>
+        <button id="botaoResetar" class="btn-reset" onclick="limpar_form()">Limpar</button>
+
+        </div>
     </div>
     </div>
     </div>
+
+    <footer>
+        <div class="footer">
+        <h1>Desenvolvido por &copy; Leonardo Oliveira</h1>
+        </div>
+    </footer>
 
 <script src="./assets/js/main.js"></script>    
 </body>
