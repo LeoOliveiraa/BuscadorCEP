@@ -59,10 +59,13 @@ async function buscarCep(cep) {
     }
 }
 
+
+//Função para imprimir os dados JSON na tela.
 function mostrarNaTela(resultado) {
     cidadeInput.value = resultado.localidade;
     estadoInput.value = resultado.uf;
-    // Defina outras propriedades, como estado, bairro e rua, da mesma maneira, se necessário.
+    bairroInput.value = resultado.bairro;
+    ruaInput.value = resultado.logradouro;
 }
 
 //Chamada da ação principal através de um botão.
